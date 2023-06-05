@@ -1,0 +1,192 @@
+body {
+    width: 100%;
+    height: 100%;
+  }
+  
+.wrapper{
+    min-height: 100vh;/*①高さの最小値*/
+    position: relative;/*②相対位置*/
+  }
+  
+footer {
+    width: 100%;
+    height: 120px;
+    position: absolute;/*②絶対位置*/
+    bottom: 0; /*下に固定*/
+  }
+
+#inputFile {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    bottom: 100px;
+    width: 100%;
+
+    padding: 300px 0 100px;
+    text-align: center;
+}
+
+#anaonFile {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    bottom: 100px;
+    width: 100%;
+
+    padding: 300px 0 100px;
+    text-align: center;
+}
+
+#dropArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 20%;
+    width: 100%;
+    
+    padding: 100px 0 0;
+    border: 2px dashed #494949;
+    
+    transition: all 0.25s cubic-bezier(0.21, 0.51, 0.51, 1);
+}
+
+#anaArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 20%;
+    width: 100%;
+    padding: 500px 0 0;
+    
+}
+
+#dropArea.dragover {
+    border: 2px solid #16a5bf;
+    background: rgba(22, 165, 191, 0.6);
+}
+
+#uploadFile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: block;
+    width: 300px;
+    height: 80px;
+    opacity: 0;
+    
+}
+
+#anaFile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: block;
+    width: 300px;
+    height: 80px;
+    opacity: 0;
+    
+}
+
+#inputFileWrap {
+    position: relative;
+    display: inline-block;
+}
+
+#btnInputFile,
+#btnanaFile,
+#btnChangeFile {
+    display: table;
+    width: 90%;
+    text-align: center
+}
+
+#btnanaFile{
+display: table;
+width: 90%;
+text-align: center
+}
+
+#btnChangeFile {
+    display: none;
+}
+
+
+#btnInputFile span,
+#btnanaFile span,
+#btnChangeFile span {
+    position: relative;
+    z-index: 2;
+    display: table-cell;
+    width: 300px;
+    height: 80px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: #333;
+    text-decoration: none;
+    color: #fff;
+    font-size: 26px;
+    line-height: 1;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+#upFileWrap.selected #btnInputFile {
+    display: none;
+}
+
+#upFileWrap.selected #btnChangeFile {
+    display: table;
+}
+
+/*画面右側*/
+
+#outputFileWrap {
+    position: relative;
+    /*display: inline-block;*/
+}
+#outputFile {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    bottom: 100px;
+    width: 45%;
+    
+    padding: 300px 0 100px;
+    text-align: center;
+}
+
+#outputArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 20%;
+    width: 100%;
+    
+    padding: 100px 0 0;
+    border: 2px dashed #494949;
+    
+    transition: all 0.25s cubic-bezier(0.21, 0.51, 0.51, 1);
+}
+
+#btnanaFile span,
+#btnChangeFile span {
+    position: relative;
+    top: 300px;
+    left: 0px;
+    z-index: 2;
+    display: table-cell;
+    width: 300px;
+    height: 80px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: #333;
+    text-decoration: none;
+    
+    color: #fff;
+    font-size: 26px;
+    line-height: 1;
+    font-weight: bold;
+    vertical-align: middle;
+}

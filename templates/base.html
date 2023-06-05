@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>File Uploader</title>
+    
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    </head>
+    <body>
+        <div class="wrapper">
+        <header>
+            <div><h1><a href = "{{ url_for('show_index') }}">HOME</a></h1></div>
+            <hr>
+        </header>
+
+
+{% block main %}
+{% endblock %}
+    
+    
+        <footer class="footer">
+            <hr>
+            <div>
+                <small class="copy-right">©️ analysis app 02</small>
+            </div>
+            <div class="footer_in">
+                <p class="copyright">Study the Analysis of CAD Drawings ,2023 All Rights Reserved.</p><!-- /.copyright -->
+                <div class="push"></div>
+            </div><!-- /.footer_in -->
+        </footer><!-- /#footer -->
+    </div>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block main %}
+    <main>
+        
+        <div id="upFileWrap">
+            <div id="inputFile">
+                <!-- ドラッグ&ドロップエリア -->
+                <p id="dropArea">ここにファイルをドロップしてください<br>または</p>
+        
+                <!-- 通常のinput[type=file] -->
+                <div id="inputFileWrap">
+                    <input type="file" name="uploadFile" id="uploadFile">
+                    <div id="btnInputFile"><span>ファイルを選択する</span></div>
+                    <div id="btnChangeFile"><span>ファイルを変更する</span></div>
+                </div>
+            </div>
+        
+
+        <div id="upFileWrap">
+            <div id="inputFile">
+                <input type="file" name="uploadFile" id="uploadFile">
+                <div id="btnAnaFile"><span>解析する（工事中）</span></div>
+                <div id="btnChangeFile"><span>ファイルを変更する</span></div>
+            </div>
+        </div>
+
+        
+            <div id="outputFile">
+                <!-- アウトプットエリア -->
+                <p id="outputArea">ここに解析結果が表示されます</p>
+        
+                <!-- 通常のinput[type=file] -->
+                <div id="outputFileWrap">
+                    <!--<input type="file" name="downloadFile" id="downloadFile">-->
+                    <div id="btnOutputFile"><span>ファイルを保存する（工事中）</span></div>
+                    <!--<div id="btnChangeFile"><span>ファイルを変更する</span></div>-->
+                </div>
+            </div>
+            
+        </div>
+        
+    <script type=text/javascript src="{{ url_for('static', filename='js/dnd.js') }}"></script>
+    <script src="{{ url_for('static', filename='pdfjs-dist/build/pdf.js')}}"></script>
+    </main>
+{% endblock %}
+<!--<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>File Uploader</title>
+    
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        
+        <div id="upFileWrap">
+            <div id="inputFile">-->
+                <!-- ドラッグ&ドロップエリア -->
+                <!--<p id="dropArea">ここにファイルをドロップしてください<br>または</p>-->
+        
+                <!-- 通常のinput[type=file] -->
+                <!--<div id="inputFileWrap">
+                    <input type="file" name="uploadFile" id="uploadFile">
+                    <div id="btnInputFile"><span>ファイルを選択する</span></div>
+                    <div id="btnChangeFile"><span>ファイルを変更する</span></div>
+                </div>
+            </div>
+        </div>
+        
+    <script type=text/javascript src="{{ url_for('static', filename='dnd.js') }}"></script>    
+    </body>
+</html>-->

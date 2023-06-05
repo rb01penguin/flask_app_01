@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>File Uploader</title>
+    
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        
+        <div id="upFileWrap">
+            <div id="inputFile">
+                <!-- ドラッグ&ドロップエリア -->
+                <p id="dropArea">ここにファイルをドロップしてください<br>または</p>
+        
+                <!-- 通常のinput[type=file] -->
+                <div id="inputFileWrap">
+                    <input type="file" name="uploadFile" id="uploadFile">
+                    <div id="btnInputFile"><span>ファイルを選択する</span></div>
+                    <div id="btnChangeFile"><span>ファイルを変更する</span></div>
+                </div>
+            </div>
+        </div>
+        
+    <script type=text/javascript src="{{ url_for('static', filename='dnd.js') }}"></script>    
+    </body>
+</html>

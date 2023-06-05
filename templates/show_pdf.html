@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block main %}
+<main>
+     
+    <div id="upFileWrap">
+        <div id="inputFile">
+            <!-- ドラッグ&ドロップエリア -->
+            <p id="dropArea"></p>
+    
+            <!-- 通常のinput[type=file] -->
+            <div id="inputFileWrap">
+                <iframe id="pdf_viewer"
+                    width="800"
+                    height="600"
+                    #navpanes=0
+                    src="/static/image_out/file.pdf#navpanes=0">
+                </iframe>
+                                    <!-- <src="/static/pdfjs-dist/web/viewer.html?file=/static/image_out/file.pdf">-->
+                <!--<input type="file" name="previewFile" id="previewFile">-->
+                <!--<div id="btnInputFile"><span>ファイルを選択する</span></div>
+                <div id="btnChangeFile"><span>ファイルを変更する</span></div>-->
+            </div>
+        </div>
+    </div>
+    
+    <div id="anaFileWrap">
+        <div id="anaonFile">
+            <p id="anaArea">データダウンロード</p>
+            <div id="anaFileWrap"> 
+                <form id="downloadFile" action="/download" method="get" >
+                    <input type="submit" style="display: none;">
+                </form> 
+                
+                <div id="btnanaFile"><span>データ取得</span></div>
+                <div id="btnanaChangeFile"><span>ファイルを変更する</span></div>
+            </div>
+        </div>
+    </div>        
+    <script type=text/javascript src="{{ url_for('static', filename='js/dnd1.js') }}"></script>
+    <!--<script src="{{ url_for('static', filename='pdfjs-dist/build/pdf.js')}}"></script>+-->
+</main>
+{% endblock %}

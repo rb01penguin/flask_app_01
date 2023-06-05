@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block main %}
+    <main>
+        <form id="uploadform" action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="targetfile" id="targetfileid" style="display: none;">
+        </form>
+        <div id="upFileWrap">
+            <div id="inputFile">
+                <!-- ドラッグ&ドロップエリア -->
+                <p id="dropArea">ここにファイルをドロップしてください<br>または</p>
+        
+                <!-- 通常のinput[type=file] -->
+                <div id="inputFileWrap">
+                    <input type="file" name="previewFile" id="previewFile">
+                    <div id="btnInputFile"><span>ファイルを選択する</span></div>
+                    <div id="btnChangeFile"><span>ファイルを変更する</span></div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="anaFileWrap">
+            <div id="anaonFile">
+                <p id="anaArea">”解析する”PUSH!!</p>
+                <div id="anaFileWrap"> 
+                    <input type="submit" name="uploadFile" id="uploadFile">
+                    <div id="btnanaFile"><span>解析する</span></div>
+                    <div id="btnanaChangeFile"><span>ファイルを変更する</span></div>
+                </div>
+            </div>
+        </div>        
+        <script type=text/javascript src="{{ url_for('static', filename='js/dnd.js') }}"></script>
+        <script src="{{ url_for('static', filename='pdfjs-dist/build/pdf.js')}}"></script>
+    </main>
+    {% endblock %}

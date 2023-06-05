@@ -1,0 +1,9 @@
+figure.image-box {
+    float: left;
+    padding-right: 20px;
+    }
+
+#pdfjs_view canvas{
+    width: 50%;
+    display: block;
+    }
